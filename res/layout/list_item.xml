@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp"
+    android:background="@drawable/list_selector" >
+    
+    <ImageView
+	android:id="@+id/img_icon"
+    	android:layout_width="64dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/default_big_icon" />
+    
+    <LinearLayout 
+        android:id="@+id/text_layout"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="6dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        
+        <TextView
+        	android:id="@+id/item_label"
+        	android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="#191919"
+            android:textSize="18.0sp" />
+
+
+        <TextView
+            android:id="@+id/item_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/favorite_item_text"
+            android:textSize="12.0sp" />
+        
+       <TextView
+            android:id="@+id/item_chapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更新到1话"
+            android:textColor="@color/favorite_item_text"
+            android:textSize="12.0sp" />
+       
+<!--        <RatingBar
+            android:id="@+id/item_stars"
+            style="@style/RatingBar.Custom_RatingBar" /> -->
+        
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="14dp"
+        android:drawableTop="@drawable/play"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="@string/red" >
+    </TextView>
+
+</LinearLayout>

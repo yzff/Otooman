@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/rate_star_big_on_normal" android:state_focused="true"/>
+    <item android:drawable="@drawable/rate_star_big_on_normal" android:state_pressed="true"/>
+    <item android:drawable="@drawable/rate_star_big_on_normal" android:state_selected="true"/>
+    <item android:drawable="@drawable/rate_star_big_on_normal"/>
+
+</selector><!--
+   Non focused states 
+
+    <item android:state_focused="false" android:state_pressed="false" android:state_selected="false" android:color="#f0f0"/>
+    <item android:state_focused="false" android:state_pressed="false" android:state_selected="true" android:color="#ffff"/>
+
+     Focused states 
+
+    <item android:state_focused="true" android:state_pressed="false" android:state_selected="false" android:color="#ffff"/>
+    <item android:state_focused="true" android:state_pressed="false" android:state_selected="true" android:color="#ffff"/>
+
+    Pressed 
+
+    <item android:state_pressed="true" android:color="#ffff"/>
+-->

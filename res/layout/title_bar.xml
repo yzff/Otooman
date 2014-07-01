@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/top_title" >
+
+    <RelativeLayout
+        android:id="@+id/noml_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_margin"
+            android:src="@drawable/btn_back"
+            android:onClick="onClick"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:layout_marginLeft="@dimen/title_margin"
+            android:src="@drawable/btn_menu" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/title_margin"
+            android:onClick="onClick"
+            android:src="@drawable/btn_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_search"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft ="@dimen/title_margin"
+        android:paddingRight="2dp"
+        android:paddingTop ="6dp"
+        android:paddingBottom ="6dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="54dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:onClick="onClick"
+            android:text="@string/conmm_cancel"
+            android:textColor="@color/white"
+            android:textSize="16sp" >
+        </Button>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toRightOf="@id/btn_cancel"
+            android:layout_marginRight="56dp"
+            android:background="@drawable/search_bj" >
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="26dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/search_btn_bj"
+                 />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:hint="点击输入" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="30dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/delete_btn_bj"
+                android:onClick="onClick" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.manyounger.otooman"
+    android:versionCode="1005"
+    android:versionName="1.005" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="16" />
+    
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name="com.manyanger.OtooApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"  >
+        <activity
+            android:name="com.manyanger.ui.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.manyanger.ui.ComicListActivity"
+            android:launchMode="singleInstance"
+	    	android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.manyanger.ui.DetailActivity"
+            android:launchMode="singleInstance"
+	    android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.manyanger.ui.CategoryActivity"
+            android:launchMode="singleInstance"
+	    android:screenOrientation="portrait">
+        </activity>
+	 <activity
+            android:name="com.manyanger.ui.ChapterDetailActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.manyanger.ui.MyComicActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+            
+        </activity>
+        <activity
+            android:name="com.manyanger.ui.ComicReaderActivity"
+            android:launchMode="singleInstance">
+        </activity>       
+
+        
+        <provider
+            android:name="com.manyanger.provider.OtooProvider"
+            android:authorities="com.manyanger.provider"
+            android:exported="false" />
+        
+    </application>
+
+</manifest>

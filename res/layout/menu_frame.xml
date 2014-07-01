@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_frame"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_bg" >
+    
+    <ImageView 
+        android:id="@+id/top_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+		android:background="@drawable/slid_top"
+  		/>
+    <ImageView 
+        android:id="@+id/bottom_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:background="@drawable/slid_bottom"
+  		/>
+	<!-- android:src="@drawable/slid_top" -->
+	<!-- android:scaleType="fitCenter" -->
+	<RelativeLayout 
+	    android:id="@+id/mid_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top_lay"
+        android:layout_above="@id/bottom_lay"
+		android:background="@drawable/slid_middle">
+		
+	    <ImageView
+	        android:id="@+id/circle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/slid_circle"/>
+	    
+	    <ImageView 
+	        android:id="@+id/btn_main"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignTop="@id/circle"
+	        android:src="@drawable/slidbtn_main"/>
+	    
+	    <ImageView 
+	        android:id="@+id/btn_mine"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_alignLeft="@id/circle"
+	        android:src="@drawable/slidbtn_mine"/>
+	    	    
+	    <ImageView 
+	        android:id="@+id/btn_catory"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_alignRight="@id/circle"
+	        android:src="@drawable/slidbtn_catory"/>
+	    
+	</RelativeLayout>
+	
+	<ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:background="@drawable/slid_top"
+  		/>
+</RelativeLayout>

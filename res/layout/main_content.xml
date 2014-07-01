@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+       
+        <LinearLayout 
+    		android:id="@+id/content_frame"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical" >
+    		
+            <!-- banner -->
+			<RelativeLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content" >
+			
+			    <com.manyanger.ui.widget.SkyGallery
+			        android:id="@+id/home_banner"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"/>
+			
+			    <com.manyanger.ui.widget.GalleryIndicator
+			        android:id="@+id/g_indicator"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/home_banner"
+			        android:layout_marginTop="-2dp" />
+			    <!-- android:layout_alignBottom="@+id/home_banner" -->
+			
+			</RelativeLayout>
+
+			<!-- 凹凸推荐标题 -->
+            <RelativeLayout 
+    			android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_marginTop="4dp"
+    			android:paddingTop="4dp"
+    			android:paddingBottom="4dp">
+                <TextView 
+                    android:id="@+id/home_recommend_title"
+                    android:layout_width="wrap_content"
+    				android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_margin"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/sub_title_size"
+                    android:textColor="@color/channel_title"
+                    android:text="@string/first_recommend"
+                    />
+                <TextView 
+                    android:id="@+id/home_recommend_btn"
+                    android:layout_width="wrap_content"
+    				android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/content_margin"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/sub_title_size"
+                    android:textColor="@color/channel_sub"
+                    android:text="@string/all"
+                    android:drawableRight="@drawable/arrow"
+                    android:clickable="true"
+                    android:onClick="onClick"/>
+                
+                <ImageView 
+                    android:layout_width="match_parent"
+    				android:layout_height="wrap_content"
+    				android:layout_toLeftOf="@id/home_recommend_btn"
+    				android:layout_toRightOf="@+id/home_recommend_title"
+    				android:layout_marginLeft="5dp"
+    				android:layout_marginRight="5dp"
+    				android:layout_centerVertical="true"
+    				android:background="@drawable/divider"
+                    />
+
+            </RelativeLayout>
+            
+            <!-- 凹凸推荐 -->
+            <com.manyanger.ui.widget.SkyGallery
+                android:id="@+id/home_recommend"
+                android:padding="2dp"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/first_channel_height"
+                android:layout_marginTop="8dp"
+                android:fadingEdge="none"
+                android:spacing="4dp" />
+            
+            <!-- 精选漫画标题 -->
+            <RelativeLayout 
+    			android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:paddingTop="4dp"
+    			android:paddingBottom="4dp">
+                <TextView 
+                    android:id="@+id/home_featured_title"
+                    android:layout_width="wrap_content"
+    				android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_margin"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/sub_title_size"
+                    android:textColor="@color/channel_title"
+                    android:text="@string/first_featured"
+                    />
+                <TextView 
+                    android:id="@+id/home_featured_btn"
+                    android:layout_width="wrap_content"
+    				android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/content_margin"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/sub_title_size"
+                    android:textColor="@color/channel_sub"
+                    android:text="@string/all"
+                    android:drawableRight="@drawable/arrow"
+                    android:clickable="true"
+                    android:onClick="onClick"/>
+                
+                <ImageView 
+                    android:layout_width="match_parent"
+    				android:layout_height="wrap_content"
+    				android:layout_marginLeft="5dp"
+    				android:layout_marginRight="5dp"
+    				android:layout_toLeftOf="@id/home_featured_btn"
+    				android:layout_toRightOf="@+id/home_featured_title"
+    				android:layout_centerVertical="true"
+    				android:background="@drawable/divider"
+                    />
+            </RelativeLayout>
+            
+            <!-- 精选漫画 -->
+            <com.manyanger.ui.widget.SkyGallery
+                android:id="@+id/home_featured"
+                android:padding="2dp"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/first_channel_height"
+                android:layout_marginTop="8dp"
+                android:fadingEdge="none"
+                android:spacing="4dp" />
+
+            <!-- 最新漫画标题 -->
+            <RelativeLayout 
+    			android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:paddingTop="4dp"
+    			android:paddingBottom="4dp">
+                <TextView 
+                    android:id="@+id/home_newest_title"
+                    android:layout_width="wrap_content"
+    				android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_margin"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/sub_title_size"
+                    android:textColor="@color/channel_title"
+                    android:text="@string/first_newest"
+                    />
+                <TextView 
+                    android:id="@+id/home_newest_btn"
+                    android:layout_width="wrap_content"
+    				android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/content_margin"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/sub_title_size"
+                    android:textColor="@color/channel_sub"
+                    android:text="@string/all"
+                    android:drawableRight="@drawable/arrow"
+                    android:clickable="true"
+                    android:onClick="onClick"/>
+                
+                <ImageView 
+                    android:layout_width="match_parent"
+    				android:layout_height="wrap_content"
+    				android:layout_marginLeft="5dp"
+    				android:layout_marginRight="5dp"
+    				android:layout_toLeftOf="@id/home_newest_btn"
+    				android:layout_toRightOf="@+id/home_newest_title"
+    				android:layout_centerVertical="true"
+    				android:background="@drawable/divider"
+                    />
+            </RelativeLayout>
+            
+            <!-- 精选漫画 -->
+            <com.manyanger.ui.widget.SkyGallery
+                android:id="@+id/home_newest"
+                android:padding="2dp"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/first_channel_height"
+                android:layout_marginTop="8dp"
+                android:fadingEdge="none"
+                android:spacing="4dp" />      
+                
+                 
+        	<FrameLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="64dp">
+        	</FrameLayout>       
+	</LinearLayout>
+
+</ScrollView>

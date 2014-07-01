@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent">
+    
+    <android.support.v4.view.ViewPager 
+        android:id="@+id/detail_view_pager" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"  
+        android:background="@android:color/black" />
+    
+    <RelativeLayout 
+        android:id="@+id/top_bar" 
+        android:layout_gravity="top" 
+        android:background="@drawable/reader_top_bg" 
+        android:visibility="invisible" 
+        android:clickable="true" 
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content">
+        
+        <ImageView 
+            android:id="@+id/back_button" 
+            android:background="@drawable/btn_back" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="6.0dip" 
+            android:layout_alignParentLeft="true" 
+            android:layout_centerVertical="true" />
+        
+        <TextView 
+            android:id="@+id/page_index" 
+            android:textSize="15.0sp" 
+            android:textColor="@android:color/white" 
+            android:gravity="center_horizontal|right" 
+            android:layout_width="48.0dip" 
+            android:layout_height="wrap_content" 
+            android:singleLine="true" 
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" 
+            android:layout_marginRight="6.0dip" />        
+        
+        <TextView 
+            android:id="@+id/title" 
+            android:textSize="19.0sp" 
+            android:textColor="@android:color/white" 
+            android:ellipsize="marquee" 
+            android:gravity="center_horizontal" 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:singleLine="true" 
+            android:layout_centerHorizontal="true" 
+            android:layout_centerVertical="true" 
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_toLeftOf="@id/page_index"
+            android:layout_toRightOf="@id/back_button"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp" >
+            
+        </TextView>"
+        
+
+    </RelativeLayout>
+    
+    <!-- <RelativeLayout 
+        android:layout_gravity="bottom" 
+        android:id="@id/bottom_bar" 
+        android:visibility="invisible" 
+        android:clickable="true" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+      
+      <RelativeLayout 
+          android:id="@id/bottom_bar_bottom_part" 
+          android:background="@drawable/my_magazine_bottom_background" 
+          android:layout_width="fill_parent" 
+          android:layout_height="wrap_content" 
+          android:layout_below="@id/bottom_bar_top_part">
+            <TextView 
+                android:textSize="18.0sp" 
+                android:textColor="@color/color_magazine_detail_current_page_number" 
+                android:id="@id/current_page_number" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginLeft="16.0dip" 
+                android:layout_alignParentLeft="true" 
+                android:layout_centerVertical="true" />
+            <TextView 
+                android:textSize="18.0sp" 
+                android:textColor="@color/color_magazine_detail_total_page_number" 
+                android:id="@id/total_page_number" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_toRightOf="@id/current_page_number" 
+                android:layout_centerVertical="true" />           
+        </RelativeLayout>
+    </RelativeLayout> -->
+    
+</FrameLayout>

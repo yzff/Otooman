@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/top_title" >
+
+<!--         <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_margin"
+            android:onClick="onClick"
+            android:src="@drawable/btn_back" /> -->
+            <ImageView
+            	android:id="@+id/menu_btn"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentLeft="true"
+            	android:layout_centerVertical="true"
+            	android:onClick="onClick"
+            	android:layout_marginLeft="@dimen/title_margin"
+            	android:src="@drawable/btn_menu" />        
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_shelf" />
+
+        <TextView
+            android:id="@+id/tv_editor"
+            style="@style/text_top_title"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:text="@string/editor" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_comic"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:cacheColorHint="#000"
+        android:scrollbars="none"
+        android:dividerHeight="0.5dp"
+        android:divider="@color/gray"
+        android:listSelector="@color/transparent" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/line_eidt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:background="@color/gray"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/btn_checkall"
+            android:layout_width="220dp"
+            android:layout_marginTop="12dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFFFFF"
+            android:onClick="onClick"
+            android:text="@string/check_all"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:background="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:layout_width="220dp"
+            android:layout_height="38dp"
+            android:textColor="#FF0000"
+            android:onClick="onClick"
+            android:layout_marginBottom="12dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/check_delete"
+			android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

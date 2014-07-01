@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_bg" >
+
+
+
+        <com.manyanger.ui.widget.PicGallery
+            android:id="@+id/pic_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:spacing="5dip" />
+
+
+     <RelativeLayout
+        android:id="@+id/read_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/read_title_bg"
+         >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_margin"
+            android:src="@drawable/read_back"
+            android:onClick="onClick" />
+
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name" />
+
+    </RelativeLayout>
+</FrameLayout>

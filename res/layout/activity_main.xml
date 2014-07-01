@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/common_bg" >
+    
+    <!-- title -->
+    <include
+    	android:id="@+id/title_layout"
+        layout="@layout/title_bar"
+        android:layout_height="48dp"
+        android:layout_width="fill_parent"
+        />
+    <FrameLayout 
+        android:id="@+id/content_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        >
+        
+    </FrameLayout>
+    
+</LinearLayout>
+    
+    
+    
